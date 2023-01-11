@@ -1,6 +1,7 @@
 name: sam_utils
-description: A new Flutter package project.
+description: print log project.
 version: 0.0.1
+
 homepage: https://github.com/VivekSamcom/sam_utils.git
 
 environment:
