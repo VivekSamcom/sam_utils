@@ -35,7 +35,7 @@ class SamUtils {
   bool isEmailValid(String? email) {
     if (email != null) {
       return RegExp(
-          r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$')
+              r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$')
           .hasMatch(email);
     } else {
       return false;
@@ -43,9 +43,11 @@ class SamUtils {
   }
 
   Future<bool> isNetworkConnected() async {
-    ConnectivityResult connectivityResult = await (Connectivity().checkConnectivity());
+    ConnectivityResult connectivityResult =
+        await (Connectivity().checkConnectivity());
     if (connectivityResult == ConnectivityResult.none) {
-      printLog("utils : Connectivity result : ${connectivityResult.toString()}");
+      printLog(
+          "utils : Connectivity result : ${connectivityResult.toString()}");
       return false;
     } else {
       return true;
@@ -71,7 +73,8 @@ class SamUtils {
     if (buildContext != null) {
       try {
         // ignore: unnecessary_null_comparison
-        if (MediaQuery.of(buildContext).size.width != null) screenWidth = MediaQuery.of(buildContext).size.width;
+        if (MediaQuery.of(buildContext).size.width != null)
+          screenWidth = MediaQuery.of(buildContext).size.width;
       } catch (ex) {
         printLog("EX. UTILS While getting screen width... : ${ex.toString()}");
         screenWidth = 0;
@@ -135,7 +138,7 @@ class SamUtils {
   static const String MMddyyyy = "MM/dd/yyyy";
   static const String MMddyyyy_hhmma = "MM/dd/yyyy hh:mma";
   static const String ddMMyyyy_HHmmss = "dd-MM-yyyy HH:mm:ss";
-  static const String HHmm = "HH:mm";
+  static const String HHmm = "HH:mm:ss";
   static const int defaultTime = 111111;
 
   String getCurrentDateTime() {
@@ -167,4 +170,3 @@ class SamUtils {
     }
   }
 }
-
