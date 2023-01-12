@@ -138,7 +138,7 @@ class SamUtils {
   static const String MMddyyyy = "MM/dd/yyyy";
   static const String MMddyyyy_hhmma = "MM/dd/yyyy hh:mma";
   static const String ddMMyyyy_HHmmss = "dd-MM-yyyy HH:mm:ss";
-  static const String HHmm = "HH:mm";
+  static const String HHmm = "HH:mm:ss";
   static const int defaultTime = 111111;
 
   String getCurrentDateTime() {
