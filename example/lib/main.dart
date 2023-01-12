@@ -30,7 +30,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final TextEditingController _textController = TextEditingController(text: "Hello sam_utils");
+  final TextEditingController _textController =
+      TextEditingController(text: "Hello sam_utils");
 
   @override
   Widget build(BuildContext context) {
@@ -44,19 +45,28 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: <Widget>[
             Text('App is running on a web platform : ${isAppRunningOnWeb()}'),
-            Text('Provided email is in a valid format : ${SamUtils().isEmailValid("abc@gmail.com")}'),
+            Text(
+                'Provided email is in a valid format : ${SamUtils().isEmailValid("abc@gmail.com")}'),
             Text(
                 'Trimmed text of the provided TextEditingController : ${SamUtils().getTextEditingString(_textController)}'),
             Text(
                 'TextEditingController is null or its text is empty : ${SamUtils().isTextEditingEmpty(_textController)}'),
-            Text('Width of the screen in pixels : ${SamUtils().getScreenWidth(context)}'),
-            Text('Converts the provided dynamic value to double : ${SamUtils.parseDynamicToDouble("123")}'),
-            Text('Name of the platform the app is running on : ${SamUtils().getPlatformName()}'),
-            Text('Current date and time in the format dd-MM-yyyy HH:mm:ss : ${SamUtils().getCurrentDateTime()}'),
-            Text('Current date in the format dd-MM-yyyy : ${SamUtils().getCurrentDate()}'),
-            Text('Current time in the format HH:mm:ss : ${SamUtils().getCurrentTime()}'),
-            Text('Current timestamp in milliseconds : ${SamUtils().getCurrentTimeStamp()}'),
-            Text('Number of hours in the provided number of milliseconds : ${SamUtils().millisecondToHours(19616565)}'),
+            Text(
+                'Width of the screen in pixels : ${SamUtils().getScreenWidth(context)}'),
+            Text(
+                'Converts the provided dynamic value to double : ${SamUtils.parseDynamicToDouble("123")}'),
+            Text(
+                'Name of the platform the app is running on : ${SamUtils().getPlatformName()}'),
+            Text(
+                'Current date and time in the format dd-MM-yyyy HH:mm:ss : ${SamUtils().getCurrentDateTime()}'),
+            Text(
+                'Current date in the format dd-MM-yyyy : ${SamUtils().getCurrentDate()}'),
+            Text(
+                'Current time in the format HH:mm:ss : ${SamUtils().getCurrentTime()}'),
+            Text(
+                'Current timestamp in milliseconds : ${SamUtils().getCurrentTimeStamp()}'),
+            Text(
+                'Number of hours in the provided number of milliseconds : ${SamUtils().millisecondToHours(19616565)}'),
           ],
         ),
       ),
