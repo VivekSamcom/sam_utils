@@ -4,7 +4,12 @@ A Flutter library for commonly used utility functions.
 
 ## Supported platforms
 
-Android iOS Web macOS linux windows
+- Android
+- iOS 
+- Web 
+- macOS 
+- linux 
+- windows
 
 ## Getting Started
 
@@ -18,7 +23,7 @@ Import the library using:
 import 'package:sam_utils/sam_utils.dart';
 ```
 
-## Features
+## Documentation
 
 Prints log messages to the console with an optional tag.
 
@@ -37,13 +42,6 @@ Returns true if the provided email is in a valid format, false otherwise.
 ```dart
 
 bool isEmailValid = isEmailValid(String ? email);
-```
-
-Returns a Future<bool> that completes with true if the device has an active internet connection, false otherwise.
-
-```dart
-
-bool isNetworkConnected = await SamUtils().isNetworkConnected();
 ```
 
 Returns the trimmed text of the provided TextEditingController as a String.
@@ -116,6 +114,24 @@ Returns the number of hours in the provided number of milliseconds.
 int hours = SamUtils().millisecondToHours(int milliseconds);
 ```
 
-## Contributions
+## MIT License
 
-Feel free to contribute by creating pull requests.
+Copyright (c) 2023 Vivek Hirapara 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
