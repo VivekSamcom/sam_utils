@@ -1,7 +1,7 @@
 name: sam_utils
 description: print log project.
 version: 0.0.1
-
+repository: https://github.com/VivekSamcom/sam_utils.git
 homepage: https://github.com/VivekSamcom/sam_utils.git
 
 environment:
@@ -11,6 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  connectivity_plus: ^3.0.2
+  intl: ^0.18.0  
 
 dev_dependencies:
   flutter_test:
