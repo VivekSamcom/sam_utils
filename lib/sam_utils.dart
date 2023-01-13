@@ -106,22 +106,24 @@ class SamUtils {
   }
 
   String getPlatformName() {
-    if (Platform.isAndroid) {
-      return "android";
-    } else if (Platform.isIOS) {
-      return "iOS";
-    } else if (Platform.isMacOS) {
-      return "macOS";
-    } else if (Platform.isWindows) {
-      return "windows";
-    } else if (Platform.isLinux) {
-      return "linux";
-    } else if (Platform.isFuchsia) {
-      return "fuchsia";
-    } else if (kIsWeb) {
+    if (kIsWeb) {
       return "web";
     } else {
-      return "NOP";
+      if (Platform.isAndroid) {
+        return "android";
+      } else if (Platform.isIOS) {
+        return "iOS";
+      } else if (Platform.isMacOS) {
+        return "macOS";
+      } else if (Platform.isWindows) {
+        return "windows";
+      } else if (Platform.isLinux) {
+        return "linux";
+      } else if (Platform.isFuchsia) {
+        return "fuchsia";
+      } else {
+        return "NOP";
+      }
     }
   }
 

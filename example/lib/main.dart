@@ -43,6 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text('App is running on a web platform : ${isAppRunningOnWeb()}'),
             Text(
